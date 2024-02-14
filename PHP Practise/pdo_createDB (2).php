@@ -26,6 +26,7 @@ try {
 
 $conn = null;
 
+// we will begin the process for creating a new table
 $dbname = "myDBTEST";
 
 try {
