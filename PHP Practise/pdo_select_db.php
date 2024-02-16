@@ -11,7 +11,8 @@ try {
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "SELECT * FROM myguests";
+        //we are limiting the output to the first 3 records (if it has more records it will be not selected and displayed)
+        $sql = "SELECT * FROM myguests LIMIT 3";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
