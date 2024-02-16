@@ -11,7 +11,8 @@ try {
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $stmt = $conn->prepare("SELECT * FROM myguests");
+        $sql = "SELECT * FROM myguests";
+        $stmt = $conn->prepare($sql);
         $stmt->execute();
 
         $stmt->setFetchMode(PDO::FETCH_NUM);
